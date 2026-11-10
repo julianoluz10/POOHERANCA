@@ -1,0 +1,42 @@
+
+namespace Heranca
+{
+    public class Gerente : Funcionario
+    {
+        public int Codigo {get; set;}
+
+        public void GerenciarEquipe()
+        {
+            Console.WriteLine("O gestor está gerenciando a equipe");
+        }
+        public Gerente()
+        {
+            
+        }
+
+        public Gerente(string nome, decimal salario) : base(nome, salario )
+        {
+            
+        }
+
+        public void ExibirSalario()
+        {
+           Console.WriteLine($" Salario {Salario:C} "); 
+        }
+
+        public void DefinirSalario (decimal valorSalario)
+        {
+            Salario = valorSalario;
+        }
+
+        public override decimal CalcularBonus ()
+        {
+            return 1000m;
+        }
+
+        public override void Trabalhar()
+        {
+            Console.WriteLine("Gerenciando a equipe.");
+        }
+    }
+}
